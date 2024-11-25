@@ -1,37 +1,37 @@
 export const bio = [
-  "Hello! I'm Vinay Somawat, an experienced Frontend Software Engineer with a proven ability to upgrade applications, optimize performance, and deliver innovative solutions.",
+  "Greetings! I'm David Miller, an experienced Unreal Developer with a proven ability in python, shader development, and third party plugin forking.",
   "I am passionate about using my technical skills to drive impactful contributions in challenging projects.",
   "Thanks for visiting!",
 ];
 
 export const skills = [
   {
-    title: "Languages",
-    skillName: "JavaScript, TypeScript",
+    title: "GameDev",
+    skillName: "C++"
     color: "1",
     percentage: "80",
   },
   {
-    title: "Frameworks/Libraries",
-    skillName: "Angular, RxJS, NGRX/NGXS",
+    title: "Scripting",
+    skillName: "Python",
     color: "6",
     percentage: "70",
   },
   {
     title: "Design",
-    skillName: "HTML, Bootstrap, Tailwind",
+    skillName: "Blueprints, Shader Dev",
     color: "4",
     percentage: "70",
   },
   {
     title: "Version Control",
-    skillName: "GitHub, JIRA, Bitbucket",
+    skillName: "GitHub, Perforce, JIRA",
     color: "7",
     percentage: "70",
   },
   {
     title: "Tools",
-    skillName: "Debugging, Chrome DevTools",
+    skillName: "PyCharm, Visual Studio",
     color: "3",
     percentage: "80",
   },
@@ -150,17 +150,17 @@ export const projects = {
 
 export const experience = [
   {
-    title: "Shiprocket (Bigfoot Solution Private Limited)",
-    duration: "September 2022 - Present",
-    subtitle: "Software Engineer",
+    title: "Halon Entertainment (Technical Director)",
+    duration: "Febuary 2020 - Present",
+    subtitle: "Technical Director",
     details: ["Working in support and escalation team."],
     tags: ["JavaScript", "Angular", "Bootstrap", "Nodejs", "Jenkins"],
     icon: "truck ",
   },
   {
-    title: "Biofourmis India Private Limited",
-    duration: "April 2022 - Jul 2023",
-    subtitle: "Software Engineer",
+    title: "Halon Entertainment (Technical Artist)",
+    duration: "October 2018 - Febuary 2020",
+    subtitle: "Technical Artist",
     details: [
       `Implemented microfrontends using the Module Federation Plugin in Angular.
             Rendered components from remote modules/repositories, enabling a modular and scalable architecture`,
@@ -179,12 +179,6 @@ export const experience = [
     ],
     tags: [
       "JavaScript",
-      "Angular",
-      "RxJS",
-      "NGXS",
-      "TypeScript",
-      "RxState",
-      "Webpack",
       "Optimization",
     ],
     icon: "heartbeat",
@@ -247,16 +241,12 @@ export const footer = [
 //     label: "Dev Profiles",
 //     data: [
 //       {
-//         text: "Stackoverflow",
-//         link: "https://stackoverflow.com/users/8461233/vinay-somawat",
-//       },
-//       {
 //         text: "GitHub",
-//         link: "https://github.com/vinaysomawat",
+//         link: "https://github.com/simsaladoo",
 //       },
 //       {
 //         text: "LeetCode",
-//         link: "https://leetcode.com/somawatvinay/",
+//         link: "https://leetcode.com/simsaladoo/",
 //       },
 //     ],
 //   },
@@ -273,7 +263,7 @@ export const footer = [
 //       },
 //       {
 //         text: "Clone this page",
-//         link: "https://github.com/vinaysomawat/vinaysomawat.github.io",
+//         link: "https://github.com/simsaladoo/simsaladoo.github.io",
 //       },
 //     ],
 //   },
@@ -282,7 +272,7 @@ export const footer = [
     data: [
     //   {
     //     text: "Linkedin",
-    //     link: "https://www.linkedin.com/in/vinaysomawat/",
+    //     link: "https://www.linkedin.com/in/simsaladoo/",
     //   },
     //   {
     //     text: "Twitter",
@@ -293,15 +283,15 @@ export const footer = [
         link: "https://www.buymeacoffee.com/r194dME8y",
       },
       {
-        text: "Github/vinaysomawat.github.io",
-        link: "https://github.com/vinaysomawat/vinaysomawat.github.io",
+        text: "Github/simsaladoo.github.io",
+        link: "https://github.com/simsaladoo/simsaladoo.github.io",
       },
     ],
   },
   {
     label: "copyright-text",
     data: [
-      "Made with &hearts; by Vinay Somawat.",
+      "Made with &hearts; by Simsaladoo.",
       "&copy; No Copyrights. Feel free to use this template.",
     ],
   },

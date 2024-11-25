@@ -1,5 +1,5 @@
-const githubUsername = "vinaysomawat";
-const mediumUsername = "vinaysomawat";
+const githubUsername = "simsaladoo";
+const mediumUsername = "simsaladoo";
 
 const createMediumURL = (username) => `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@${username}`;
 const createGitConnectedURL = (username) => `https://gitconnected.com/v1/portfolio/${username}`;
