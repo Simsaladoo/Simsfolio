@@ -256,7 +256,7 @@
     counter();
     counterWayPoint();
     contentWayPoint();
-    burgerMenu();
+    // burgerMenu();
 
     clickMenu();
     navigationSection();
