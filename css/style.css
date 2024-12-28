@@ -14,10 +14,6 @@
 	box-sizing: border-box;
 }
 
-.dark-mode {
-	background-color: black;
-	color: white;
-  }
 
 /* =======================================================
 *
@@ -30,7 +26,7 @@ body {
 	font-weight: 400;
 	font-size: 15px;
 	line-height: 1.8;
-	color: black;
+	color: white;
 }
 @media screen and (max-width: 992px) {
 	body {
@@ -265,7 +261,7 @@ figure figcaption {
 }
 #colorlib-aside #colorlib-main-menu ul li a:hover {
 	text-decoration: none;
-	color: black;
+	color: white;
 }
 #colorlib-aside #colorlib-main-menu ul li a:hover:after {
 	visibility: visible;
@@ -324,7 +320,7 @@ figure figcaption {
 }
 #rcorners2 {
 	border-radius: 15px;
-	background: black;
+	background: white;
 	padding: 20px;
 	width: 50%;
 	height: 40px;
@@ -338,7 +334,7 @@ figure figcaption {
 #colorlib-aside .colorlib-footer ul li a:focus {
 	text-decoration: none;
 	outline: none;
-	color: black;
+	color: white;
 }
 
 .container-wrap {
@@ -439,7 +435,7 @@ figure figcaption {
 #colorlib-hero .flexslider .slider-text > .slider-text-inner h2 {
 	margin: 0;
 	padding: 0;
-	color: black;
+	color: white;
 	font-family: "Playfair Display", Georgia, serif;
 }
 #colorlib-hero .flexslider .slider-text > .slider-text-inner h1 {
@@ -597,7 +593,7 @@ body.offcanvas .colorlib-nav-toggle {
 }
 
 #colorlib-footer2 {
-	background: black;
+	background: white;
 	width: 100%;
 	padding-bottom: 3em;
 	padding-top: 2em;
@@ -2126,7 +2122,6 @@ ul {
 
 span {
 	font-family: "Montserrat", sans-serif;
-	/* color: black; */
 	display: inline-block; /* change the display type           */
 	margin: 0 5px;
 }
@@ -2239,7 +2234,7 @@ span {
 .copyright-text p {
 	margin-top: 0px;
 	margin-bottom: 0px;
-	color: black;
+	color: white;
 }
 
 .readmore {
