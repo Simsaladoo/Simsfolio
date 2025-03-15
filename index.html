@@ -11,6 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="assets/css/github-calendar.css">
 	</head>
 	<body class="is-preload">
 
@@ -42,15 +43,30 @@
                     <img class ="bordimage" src="images/border.png" alt="" />
                 </div>
 
+
+				<div class="calendar">
+					<br/>
+					<!-- Loading stuff -->
+					Loading the calendar...
+				</div>
+				<script src="./assets/js/github-calendar.js"></script>
+				<script>
+					GitHubCalendar(".calendar", "Simsaladoo", {
+						responsive: true,
+						tooltips: true,
+						global_stats: false // This disables the contribution stats
+					});
+				</script>
+
 				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<ul class="icons">
-								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-							</ul>
-						</div>
-					</footer>
+				<footer id="footer">
+					<div class="inner">
+						<ul class="icons">
+							<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						</ul>
+					</div>
+				</footer>
 
 			</div>
 
