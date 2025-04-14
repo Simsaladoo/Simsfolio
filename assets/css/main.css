@@ -20,14 +20,31 @@
 
 .image-section {
     flex: 7;
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures image fills space, crops if needed */
+    padding: 0 ;
+    margin: 0;
+    width: 105%;
+    color: white;
 }
+
+.row {
+    color: white;
+}
+
+.image1 {
+    background-image: url('../../images/cotw.jpg');
+}
+
+.image2 {
+    background-image: url('../../images/woa.png');
+}
+
+.image3 {
+    background-image: url('../../images/buoyancy.gif');
+}
+
 .text-section-right {
     flex: 3;
     padding: 45px;
