@@ -2,10 +2,19 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic");
 
 
+
 .portos {
     background: #242943!important;
 }
 
+h1 a {
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.3s ease;
+}
+
+h1 a:hover {
+    color: rgba(255, 255, 255, 1.0); /* barely visible overlay */
+}
 
 .bordorange {
     background-image: url('../../images/border.png');
@@ -16,6 +25,7 @@
 
 .hbox h1 {
     line-height: 1.0;
+    width: 100%;
     }
 
 .image-section {
@@ -26,11 +36,11 @@
     padding: 0 ;
     margin: 0;
     width: 105%;
-    color: white;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .row {
-    color: white;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .image1 {
@@ -270,10 +280,6 @@ ul.pagination li:last-child {
 			display: -webkit-flex;
 			display: -ms-flex;
 			display: flex;
-			-moz-justify-content: -moz-flex-end;
-			-webkit-justify-content: -webkit-flex-end;
-			-ms-justify-content: -ms-flex-end;
-			justify-content: flex-end;
 			-moz-flex-grow: 1;
 			-webkit-flex-grow: 1;
 			-ms-flex-grow: 1;
@@ -488,7 +494,7 @@ ul.pagination li:last-child {
 }
 
 .banner {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url("../../images/banner.png");
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url("../../images/banner.png");
     background-repeat: no-repeat;
     background-size: cover;
     padding: 0 ;
@@ -591,11 +597,10 @@ ul.pagination li:last-child {
 			}
 
 		#menu ul {
-			margin: 0 0 1em 0;
+			margin: 0 0 0 0;
 		}
 
 			#menu ul.links {
-				list-style: none;
 				padding: 0;
 			}
 
@@ -609,7 +614,6 @@ ul.pagination li:last-child {
 						display: block;
 						font-size: 0.8em;
 						font-weight: 600;
-						letter-spacing: 0.25em;
 						line-height: 4em;
 						text-decoration: none;
 						text-transform: uppercase;
@@ -716,6 +720,7 @@ nav ul {
     padding: 0;
     margin: 0px;
     font-size: 1.0rem;
+    width: 100%;
 }
 
 nav ul li {
