@@ -675,7 +675,7 @@ ul.icons {
     display: flex;
     margin: 0;
     width: 100%;
-    height: 475px;
+    flex: 1;
 }
 
 .container2 {
@@ -732,8 +732,8 @@ ul.icons {
 .minimized-line-height {
     line-height: 1.2;
     margin: 0;
-    margin-left:100px;
-    margin-right:100px;
+    margin-left:1.0px;
+    margin-right:1.0px;
     text-align: left;
 }
 
