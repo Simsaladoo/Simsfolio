@@ -17,7 +17,7 @@ h1 a:hover {
 }
 
 .bordorange {
-    background-image: url('../../images/border.png');
+    background-image: url('https://github.com/Simsaladoo/Simsfolio/tree/main/images/border.png');
     background-repeat: repeat-x;
     min-height: 24px;
 }
@@ -44,15 +44,15 @@ h1 a:hover {
 }
 
 .image1 {
-    background-image: url('../../images/cotw.jpg');
+    background-image: url('https://github.com/Simsaladoo/Simsfolio/tree/main/images/cotw.jpg');
 }
 
 .image2 {
-    background-image: url('../../images/woa.png');
+    background-image: url('https://github.com/Simsaladoo/Simsfolio/tree/main/images/woa.png');
 }
 
 .image3 {
-    background-image: url('../../images/buoyancy.gif');
+    background-image: url('https://github.com/Simsaladoo/Simsfolio/tree/main/images/buoyancy.gif');
 }
 
 .text-section-right {
