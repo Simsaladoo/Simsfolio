@@ -2,10 +2,10 @@
 const navbarHTML = `
 <nav>
     <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="generic.html">Game Dev</a></li>
+        <li><a href="https://github.com/Simsaladoo/Simsfolio/blob/main/index.html">Home</a></li>
+        <li><a href="https://github.com/Simsaladoo/Simsfolio/blob/main/generic.html">Game Dev</a></li>
         <li>
-            <a href="elements.html">Programming</a>
+            <a href="https://github.com/Simsaladoo/Simsfolio/blob/main/elements.html">Programming</a>
             <ul class="dropdown">
                 <li><a href="#" id="content1">Unreal Python</a></li>
                 <li><a href="#" id="content2">Tools</a></li>
@@ -13,7 +13,7 @@ const navbarHTML = `
                 <li><a href="#" id="content4">Image Data Layering</a></li>
             </ul>
         </li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="https://github.com/Simsaladoo/Simsfolio/blob/main/about.html">About</a></li>
     </ul>
 </nav>
 `;
