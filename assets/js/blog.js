@@ -1,12 +1,12 @@
 // Paths to the Markdown files (e.g., files in the same directory or a server)
 const markdownFiles = [
-    'https://david-miller.life/js/about/asset_tagging.md',
-    'https://david-miller.life/js/about/foliage_copier.md',
-    'https://david-miller.life/js/about/screenshot_tool.md',
-    'https://david-miller.life/js/about/sequence_pass_generation.md',
-    'https://david-miller.life/js/about/static_mesh_masking.md',
-    'https://david-miller.life/js/about/turntable_automation.md',
-    'https://david-miller.life/js/about/unreal.md',
+    'https://david-miller.life/pages/asset_tagging.md',
+    'https://david-miller.life/pages/foliage_copier.md',
+    'https://david-miller.life/pages/screenshot_tool.md',
+    'https://david-miller.life/pages/sequence_pass_generation.md',
+    'https://david-miller.life/pages/static_mesh_masking.md',
+    'https://david-miller.life/pages/turntable_automation.md',
+    'https://david-miller.life/pages/unreal.md',
 ];
 
 const itemsPerPage = 1; // Number of files per page
