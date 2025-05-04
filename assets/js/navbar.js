@@ -3,8 +3,7 @@ const navbarHTML = `
 <nav>
     <ul>
         <li><a href="https://david-miller.life/index.html">Home</a></li>
-        <li><a href="https://david-miller.life/generic.html">Unreal Dev</a></li>
-        <li><a href="https://david-miller.life/elements.html">Programming</a></li>
+        <li><a href="https://david-miller.life/elements.html">Tools Programming</a></li>
         <li><a href="https://david-miller.life/about.html">About</a></li>
     </ul>
 </nav>

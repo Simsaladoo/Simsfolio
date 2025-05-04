@@ -7,6 +7,7 @@
     background: #242943!important;
 }
 
+
 h1 a {
     color: rgba(255, 255, 255, 0.7);
     transition: color 0.3s ease;
@@ -42,6 +43,16 @@ h1 a:hover {
 .row {
     color: rgba(255, 255, 255, 0.7);
 }
+
+.row a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: None;
+}
+
+.row a:hover {
+    color: rgba(255, 255, 255, 1.0);
+}
+
 
 .image1 {
     background-image: url('../../images/cotw.jpg');
@@ -524,12 +535,18 @@ ul.pagination li:last-child {
 
 
 /* Footer */
-#footer {
-    margin-top: 15px;
+.footer {
+    padding: 0px;
+    margin: 0px;
+    max-width: 100%!important;
+    position: fixed;
+    bottom:0;
+    left:0;
+
+    background-color: rgba(255, 255, 255, 1.0);
 }
-.icons {
-    width: 100%;
-    display: flex;
+
+.footer a {
     margin: 0px;
     padding: 10px;
 }
