@@ -11,9 +11,28 @@
     color: rgba(255, 255, 255, 0.7);
 }
 
-.logo {
-    background-image: url('../../images/logo.jpg');
-    min-height: 24px;
+.selfie {
+    background-image: url('https://david-miller.life/images/logo.png');
+    min-height: 256px;
+    min-width: 256px;
+    background-repeat: no-repeat;
+    background-position: center;
+    /*background-size: cover;*/
+    padding: 0px;
+    margin: 0px;
+}
+
+#fader {
+
+}
+
+.fade {
+      opacity: 0;
+      transition: opacity 1s ease-in;
+    }
+
+.fade.show {
+  opacity: 1;
 }
 
 h1 a {
@@ -21,12 +40,17 @@ h1 a {
     transition: color 0.3s ease;
 }
 
+.tight {
+    padding-left:10%;
+    padding-right:10%;
+}
+
 h1 a:hover {
     color: rgba(255, 255, 255, 1.0); /* barely visible overlay */
 }
 
 .bordorange {
-    background-image: url('../../images/border.png');
+    background-image: url('https://david-miller.life/images/border.png');
     background-repeat: repeat-x;
     min-height: 24px;
 }
@@ -45,7 +69,6 @@ h1 a:hover {
     padding: 0 ;
     margin: 0;
     width: 105%;
-
 }
 
 .row {
@@ -63,7 +86,7 @@ h1 a:hover {
 
 
 .image1 {
-    /*background-image: url('../../images/cotw.jpg');*/
+    /*background-image: url('https://david-miller.life/images/cotw.jpg');*/
     position: relative;
     overflow: hidden;
 }
@@ -82,11 +105,11 @@ h1 a:hover {
 }
 
 .image2 {
-    background-image: url('../../images/woa.png');
+    background-image: url('https://david-miller.life/images/woa.png');
 }
 
 .image3 {
-    background-image: url('../../images/buoyancy.gif');
+    background-image: url('https://david-miller.life/images/buoyancy.gif');
 }
 
 .text-section-right {
@@ -463,7 +486,7 @@ body.is-preload #header.alt {
 }
 
 .banner {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url("../../images/banner.png");
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url("https://david-miller.life/images/banner.png");
     background-repeat: no-repeat;
     background-size: cover;
     padding: 0 ;
