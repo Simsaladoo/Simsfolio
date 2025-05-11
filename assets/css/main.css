@@ -549,7 +549,7 @@ ul.pagination li:last-child {
     max-width: 100%!important;
     position: fixed;
     bottom:0;
-    left:0;
+    left:0%;
     display: flex;
     background-color: rgba(255, 255, 255, 1.0);
     width:100%;
@@ -560,8 +560,14 @@ ul.pagination li:last-child {
     padding: 10px;
 }
 
-.footer icon {
-    text-align: center;
+.footer a img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s ease;
+}
+
+.footer a img:hover {
+  transform: scale(1.5);
 }
 
 /* Menu */
