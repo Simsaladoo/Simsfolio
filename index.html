@@ -13,6 +13,7 @@
           crossorigin="anonymous">
 		<link rel="icon" type="image/png" href="https://david-miller.life/images/favicon.ico">
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-FV79JWVKLW"></script>
+		<script src="https://david-miller.life/assets/js/lazysizes.min.js" async=""></script>
 		<script>
 		  window.dataLayer = window.dataLayer || [];
 		  function gtag(){dataLayer.push(arguments);}
@@ -45,7 +46,18 @@
 			</div>
 
 			<div class="row justify-content-center">
-				<div class="col-12 col-md-7 image-section image1"></div>
+				<div class="col-12 col-md-7 image-section image1">
+					<video
+						muted
+						autplay
+						loop
+						playsinline
+						poster="thumbnail.jpg"
+						data-src="https://david-miller.life/videos/LS_Film_Interior_720p.mp4"
+						>
+						<!-- Source will be added by JS -->
+					</video>
+				</div>
 				<div class = "col-12 col-md-5 text-section-right">
 					<h1><a href="https://www.youtube.com/watch?v=5P8R2zAhEwg&list=PLLcxd4soKLM4R4T9OCAMqgZomfemFjsH1" class="text-decoration-none">Recent Works</a></h1>
 					<p class="minimized-line-height dark">
@@ -136,6 +148,31 @@
 		<script src="https://david-miller.life/assets/js/breakpoints.min.js"></script>
 		<script src="https://david-miller.life/assets/js/util.js"></script>
 		<script src="https://david-miller.life/assets/js/main.js"></script>
+
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+			  const video = document.querySelector('video');
+
+			  const observer = new IntersectionObserver((entries, obs) => {
+				entries.forEach(entry => {
+				  if (entry.isIntersecting) {
+					const source = document.createElement('source');
+					source.src = video.dataset.src;
+					source.type = 'video/mp4';
+					video.appendChild(source);
+
+					video.load();
+					video.play();
+					obs.unobserve(video);
+				  }
+				});
+			  }, {
+				threshold: 0.1
+			  });
+
+			  observer.observe(video);
+			});
+		</script>
 
 	</body>
 </html>
