@@ -2,7 +2,7 @@
 
 Implementing walkable boats for player & AI
 
-[![Bounce]()]()
+[![MainImage](https://david-miller.life/images/bounce.gif)](https://david-miller.life/images/bounce.gif)
 
 The result at a flat z=26000
 
@@ -24,7 +24,7 @@ to give us the bounce!
 
 Mapping Buoyancy Arrays to Hulls
 
-[![Types]()]()
+[![Tagging](https://david-miller.life/images/types.gif)](https://david-miller.life/images/types.gif)
 
 The various types of boats available then presented a new set of factors where the mass & volume needed to be accounted for without adding further calculation.  The current solution was to simply map out vector translators and other vessel attributes to a datatable to hold and use those static properties. 
 
@@ -36,7 +36,7 @@ Using an enum of each vessel's name then gave it a simple drop-down per craft ty
 
 A floating point for floating time
 
-[![Floating]()]()
+[![Tagging](https://david-miller.life/images/floating.gif)](https://david-miller.life/images/floating.gif)
 
 Part of the scope in this buoyancy system is allowing for in-game 'time compression' to show up on the waves while the player is travelling across the 3D worldmap,  similarly done in Silent Hunter and other tactical submarine games that have a 3D view. 
 
