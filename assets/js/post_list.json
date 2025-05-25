@@ -1,10 +1,10 @@
 [
-    "assets/js/asset_tagging.md",
-    "assets/js/foliage_copier.md",
-    "assets/js/image_data_layering.md",
-    "assets/js/screenshot_tool.md",
-    "assets/js/sequence_pass_generation.md",
-    "assets/js/static_mesh_masking.md",
-    "assets/js/turntable_automation.md",
-    "assets/js/unreal.md"
+    "pages/asset_tagging.md",
+    "pages/foliage_copier.md",
+    "pages/image_data_layering.md",
+    "pages/screenshot_tool.md",
+    "pages/sequence_pass_generation.md",
+    "pages/static_mesh_masking.md",
+    "pages/turntable_automation.md",
+    "pages/unreal.md"
 ]
