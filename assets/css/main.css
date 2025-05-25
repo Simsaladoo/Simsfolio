@@ -22,16 +22,23 @@
   overflow: visible;
 }
 
-.product-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+.product-card {
   opacity: 0;
-  transition: opacity 1.0s ease;
+  transition: opacity 0.6s ease-in-out;
 }
 
-.product-img.loaded {
+.product-card.show {
   opacity: 1;
+}
+
+.product-img-wrapper {
+  text-align: center;
+  padding: 1rem;
+}
+
+.product-img {
+  max-width: 100%;
+  height: auto;
 }
 
 .portos {
