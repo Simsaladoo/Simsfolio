@@ -5,6 +5,86 @@ const PRODUCT_LIST_JSON = PRODUCT_DIR + 'assets/js/post_list.json';
 const MAX_PRODUCTS = 5;
 
 
+
+
+const container = document.getElementById("product-container");
+// Utility to turn "product-one.md" into "Product One"
+function deriveTitleFromFilename(path) {
+  const filename = path.split("/").pop().replace(".md", "");
+  return filename
+    .split("-")
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+}
+
+// Load the list of markdown file paths from external JSON
+fetch(PRODUCT_LIST_JSON)
+  .then(res => res.json())
+  .then(markdownFiles => {
+    markdownFiles.forEach((url, index) => {
+      const title = deriveTitleFromFilename(url);
+
+      const cardCol = document.createElement("div");
+      cardCol.className = "col-12";
+
+      const card = document.createElement("div");
+      card.className = "card";
+
+      const header = document.createElement("div");
+      header.className = "card-header";
+      header.style.cursor = "pointer";
+      header.textContent = title;
+      header.setAttribute("data-bs-toggle", "collapse");
+      header.setAttribute("data-bs-target", `#product-${index}`);
+      header.setAttribute("aria-expanded", "false");
+      header.setAttribute("aria-controls", `product-${index}`);
+
+      const body = document.createElement("div");
+      body.className = "collapse";
+      body.id = `product-${index}`;
+
+      const content = document.createElement("div");
+      content.className = "card-body markdown-content";
+      content.innerHTML = `<em>Loading...</em>`;
+
+      body.appendChild(content);
+      card.appendChild(header);
+      card.appendChild(body);
+      cardCol.appendChild(card);
+      container.appendChild(cardCol);
+
+      // Lazy-load markdown content on first open
+      let hasLoaded = false;
+      header.addEventListener("click", () => {
+        if (!hasLoaded) {
+          fetch(url)
+            .then(res => res.text())
+            .then(markdown => {
+              content.innerHTML = marked.parse(markdown);
+              hasLoaded = true;
+            })
+            .catch(() => {
+              content.innerHTML = `<div class="text-danger">Failed to load content.</div>`;
+            });
+        }
+      });
+    });
+  })
+  .catch(() => {
+    container.innerHTML = `<div class="text-danger">Failed to load product list.</div>`;
+  });
+
+
+
+
+
+
+
+
+
+
+
+
 // Parse frontmatter manually (YAML between --- ... ---)
 function parseFrontMatter(markdown) {
   const frontMatterRegex = /^---\s*([\s\S]*?)\s*---/;
@@ -130,4 +210,3 @@ async function loadAllProducts() {
   loader.style.display = 'none';
 }
 
-loadAllProducts();
