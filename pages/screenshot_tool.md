@@ -11,6 +11,7 @@ Then it will append the following to be used as each screenshots name:
 You can see this functionality in the below image:
 
 It requires the basic python scripting plugin to be enabled, and an export location to be specified in the Tool's python package:
-Screenshot 2022-09-16 155419.png
+
+[![MainImage](https://david-miller.life/images/plugin.png)](https://david-miller.life/images/plugin.png)
 
 How it works

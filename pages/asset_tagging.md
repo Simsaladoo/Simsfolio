@@ -17,7 +17,7 @@ The known struct can then be added to the params of the unreal.CSVImportFactory(
 
 With the import settings in place, we can use the same object cast to set tags within the Editor Asset Library.  In this case the table itself is used during game play to store localized  arrays of vectors, so it gets a tag to denote its purpose and feature:
 
-[![Main Image](https://david-miller.life/images/tags_show.png)](https://david-miller.life/images/tags_show.png)
+[![MainImage](https://david-miller.life/images/tags_show.png)](https://david-miller.life/images/tags_show.png)
 
 [![Tagging](https://david-miller.life/images/tags_popup.png)](https://david-miller.life/images/tags_popup.png)
 

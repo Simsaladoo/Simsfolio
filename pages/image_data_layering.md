@@ -1,12 +1,12 @@
 ### Data Layering with Image to CSV Conversion
 
-[![Layers]()]()
+[![MainImage](https://david-miller.life/images/datalayer_diagram.png)](https://david-miller.life/images/datalayer_diagram.png)
 
 (Happy data generated using 'B' color values, slightly warped just due to my column sizing in excel :) )
 
-[![HappyData]()]()
+[![Tagging](https://david-miller.life/images/datalayer_happy.png)](https://david-miller.life/images/datalayer_happy.png)
 
-[![Data]()]()
+[![Tagging](https://david-miller.life/images/datalayer_num.png)](https://david-miller.life/images/datalayer_load.png)
 
 Easy peasy in C#!  The struct for the Y alignment columns needs be to setup in Unreal according to the image's resolution.  The above is using a 64 x 64 image, and is read/wrote using System.Data; and System.Drawing;
 

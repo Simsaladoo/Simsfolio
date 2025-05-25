@@ -38,7 +38,7 @@ async function loadProductFile(filename) {
     let imgSrc = data.mainImage || '';
     if (!imgSrc) {
       const mainImg = Array.from(tempDiv.querySelectorAll('img'))
-        .find((img) => img.alt.trim().toLowerCase() === 'main image');
+        .find((img) => img.alt.trim().toLowerCase() === 'mainimage');
       if (mainImg) imgSrc = mainImg.src;
     }
 

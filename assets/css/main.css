@@ -6,7 +6,8 @@
   max-width: 400px;
   margin: 40px auto;
   opacity: 0;
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  transition: opacity 1.5s ease-out, transform 0.5s ease-out;
+  background: rgba(255, 255, 255, 0.0);
 }
 
 #product-card.show {
@@ -24,7 +25,7 @@
   height: 100%;
   object-fit: contain;
   opacity: 0;
-  transition: opacity 0.4s ease;
+  transition: opacity 1.0s ease;
 }
 
 .product-img.loaded {
