@@ -2,23 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic");
 
 
-#product-card {
-  max-width: 400px;
-  margin: 40px auto;
-  opacity: 0;
-  transition: opacity 1.5s ease-out, transform 0.5s ease-out;
-  background: rgba(255, 255, 255, 0.0);
-}
 
-#product-card.show {
-  transform: scale(1);
-  opacity: 1;
-}
-
-.product-img-wrapper {
-  aspect-ratio: 2 / 1;
-  overflow: hidden;
-}
 
 .collapse:not(.show) {
   display: block; /* keep element in flow */

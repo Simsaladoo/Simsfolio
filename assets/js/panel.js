@@ -84,7 +84,27 @@ markdownFiles.forEach((url, index) => {
       const match = markdownText.match(regex);
       if (match) {
         const imageUrl = match[2];
-        imgPreview.src = imageUrl;
+
+        const tempImg = new Image();
+        tempImg.onload = () => {
+        // Set width and height based on actual image size, scaled down if needed
+        const maxHeight = 150;
+        let width = tempImg.width;
+        let height = tempImg.height;
+
+        if (height > maxHeight) {
+          const scale = maxHeight / height;
+          height = maxHeight;
+          width = width * scale;
+        }
+
+        imgPreview.style.width = width + "px";
+        imgPreview.style.height = height + "px";
+        imgPreview.style.objectFit = "contain";
+        imgPreview.src = imageUrl;  // set actual image after sizing
+      };
+
+        tempImg.src = imageUrl;
       } else {
         imgPreview.style.display = "none"; // hide if no image found
       }
