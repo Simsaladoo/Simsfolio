@@ -82,10 +82,8 @@ fetch(PRODUCT_LIST_JSON)
             const imageUrl = match[2];
 
             const tempImg = new Image();
-            const img = cardCol.querySelector('img');
-            const card = cardCol.querySelector('.card');
             tempImg.onload = () => {
-              img.classList.add('loaded'); // optional, for image-specific styles
+              imgPreview.classList.add('loaded'); // optional, for image-specific styles
               card.classList.add('show'); // triggers fade-in
               // Set width and height based on actual image size, scaled down if needed
               const maxHeight = 150;
