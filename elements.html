@@ -5,13 +5,15 @@
 		<title>David W Miller | Tools Programming</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="https://david-miller.life/assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="https://david-miller.life/assets/css/noscript.css" /></noscript>
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
           rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
           crossorigin="anonymous">
 		<link rel="icon" type="image/png" href="https://david-miller.life/images/favicon.ico">
     	<script src="https://david-miller.life/assets/js/marked.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/js-yaml/dist/js-yaml.min.js"></script>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-FV79JWVKLW"></script>
 		<script>
 		  window.dataLayer = window.dataLayer || [];
@@ -44,16 +46,18 @@
 				</div>
 			</div>
 
-			<div class="tm-center-page tm-content moonlight tight">
-                <div class="content">
-					<div id="content1"><a href="#">Content 1</a></div>
-					<div id="content2"><a href="#">Content 2</a></div>
-					<div id="content3"><a href="#">Content 3</a></div>
-					<div id="content4"><a href="#">Content 4</a></div>
 
-					<div id="content-container"></div>
-				</div>
+
+
+			<div id="loader" class="spinner-border text-primary" role="status" aria-label="Loading">
+				<span class="visually-hidden">Loading...</span>
 			</div>
+			<div class="container py-5">
+				<div class="row" id="product-grid"></div>
+			</div>
+			<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/js-yaml/dist/js-yaml.min.js"></script>
+  			<script src="assets/js/panel.js"></script>
 
 
 		</div>
@@ -68,7 +72,6 @@
 
 
 		<!-- Scripts -->
-		<script src="https://david-miller.life/assets/js/blog.js"></script>
 		<script src="https://david-miller.life/assets/js/jquery.min.js"></script>
 		<script src="https://david-miller.life/assets/js/jquery.scrolly.min.js"></script>
 		<script src="https://david-miller.life/assets/js/jquery.scrollex.min.js"></script>
