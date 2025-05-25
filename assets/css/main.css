@@ -20,6 +20,24 @@
   overflow: hidden;
 }
 
+.collapse:not(.show) {
+  display: block; /* keep element in flow */
+  height: 0;
+  overflow: hidden;
+  transition: height 0.35s ease;
+}
+
+.collapse.show {
+  height: auto !important;
+  overflow: visible;
+}
+
+.markdown-content {
+  padding-top: 0.5rem;
+  /* make sure no max-height or overflow is limiting it */
+  overflow: visible;
+}
+
 .product-img {
   width: 100%;
   height: 100%;
