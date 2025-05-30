@@ -1,3 +1,14 @@
+---
+title: Screenshot Tool
+layout: post
+post-image: "https://david-miller.life/images/plugin.png"
+description: As you select cameras from the list, the bottom of the Tool will display the preconstructed directory and name of each image to be exported.
+tags:
+- sample
+- post
+- test
+---
+
 ### Screenshot Tool
 
 As you select cameras from the list, the bottom of the Tool will display the preconstructed directory and name of each image to be exported. It will create this from the path beginning with the show:

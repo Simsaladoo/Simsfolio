@@ -1,3 +1,14 @@
+---
+title: Foliage Converter
+layout: post
+post-image: "https://david-miller.life/images/foliage_ui.png"
+description: The tool can convert the copied instances into meshes back and forth as needed to make layout pruning a breeze.
+tags:
+- sample
+- post
+- test
+---
+
 ### Foliage Converter
 
 The purpose of this tool is to provide a simple work around for being able to re-use instances of meshes by copying in-engine painted foliage into new actors that we can control as normal.
