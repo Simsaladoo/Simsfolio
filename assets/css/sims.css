@@ -15,3 +15,17 @@
 .footer a img:hover {
   transform: scale(1.5);
 }
+
+
+.image1 video {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    position: absolute;
+    opacity: 0.25;
+}
