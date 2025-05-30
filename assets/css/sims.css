@@ -22,10 +22,14 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
     top: 0px;
     right: 0px;
     bottom: 0px;
     left: 0px;
     position: absolute;
-    opacity: 0.25;
+    opacity: 0.75;
 }
