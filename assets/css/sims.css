@@ -2,6 +2,7 @@
 .footer a {
     margin: 0px;
     padding: 10px;
+    box-sizing: content-box;
 }
 
 .footer a img {
