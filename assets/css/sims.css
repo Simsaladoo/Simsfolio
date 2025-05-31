@@ -34,7 +34,6 @@
     bottom: 0px;
     left: 0px;
     position: absolute;
-    opacity: 0.75;
     z-index: -1;
     object-fit: cover;
 }
