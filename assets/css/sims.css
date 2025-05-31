@@ -16,6 +16,9 @@
   transform: scale(1.5);
 }
 
+.copyright {
+    display: inline-flex;
+}
 
 .image1 video {
     background-position: center;
