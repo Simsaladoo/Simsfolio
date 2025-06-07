@@ -1,7 +1,7 @@
 ---
 title: P4 Mapping Views to Streams
 layout: post
-post-image: "https://david-miller.life/images/tags_show.png"
+post-image: "https://david-miller.life/images/streams.png"
 description: Linking depots into other streams with import to decrease maintainance and costs.
 tags:
 - sample
