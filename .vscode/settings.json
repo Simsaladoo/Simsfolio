@@ -1,0 +1,4 @@
+{
+    "speech-to-text-stt.insertIntoEditorAfterTranscription": true,
+    "speech-to-text-stt.transcriptionProvider": "openai"
+}
