@@ -17,7 +17,7 @@ We found that by using view mappings and putting them into their own stream, we 
 
 It also made us take up a lot less space in our AWS-managed server when it came to Plugins, as storing the binaries and content can add up quickly.  Setting up the plugins this way also allowed for a more sophisticated update process by utilizing development streams to do internal updates and new features instead of working directly on the mainline and potentially breaking existing projects.
 
-If you have a stream depot with an Unreal engine project, you can easily setup this kind of infrastructure by copying all the Plugins into one stream, and Master Materials into another--then adding their paths to the project's views.  You can read more about this functionality in the docs: https://help.perforce.com/helix-core/server-apps/p4v/current/Content/P4V/streams.views.html
+If you have a stream depot with an Unreal engine project, you can easily setup this kind of infrastructure by copying all the Plugins into one stream, and Master Materials into another--then adding their paths to the project's views.  You can read more about this functionality in the docs: [https://help.perforce.com/helix-core/server-apps/p4v/current/Content/P4V/streams.views.html](https://help.perforce.com/helix-core/server-apps/p4v/current/Content/P4V/streams.views.html)
 
 ---
 
@@ -37,7 +37,7 @@ This imported path inherits its view from the parent and all the files can be ma
 
 
 You can read more about the case-study here:
-https://www.perforce.com/customers/case-studies/vcs/halon
+[https://www.perforce.com/customers/case-studies/vcs/halon](https://www.perforce.com/customers/case-studies/vcs/halon)
 
 **Summary:**  
 Halon used Perforce Helix Core to manage their growing codebase and streamline collaboration. By adopting streams and advanced version control features, they improved workflow efficiency, reduced integration issues, and enabled faster product delivery. The case study highlights how mapping views and stream imports helped Halon scale development while maintaining control and flexibility.
