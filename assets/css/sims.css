@@ -41,3 +41,17 @@
     z-index: -1;
     object-fit: cover;
 }
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.video-grid iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* keeps proper video ratio */
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
