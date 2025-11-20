@@ -39,13 +39,15 @@ With the outputs setup and passed through, the node editor will then have all th
 
 Scripting the csv export is probably the most tedious part if you have multiple static meshes, like Kelp 1, 2 and 3.  This is only because Maya's naming will always be adding integers to the node name as a suffix when you create them.  The first node you add probably won't have an integer (like Location above), but the second one will add a '1', and then increment--so sometimes the 'index' below will just return: "".  The 'node' is also necessary for finding the specific Bifrost graph should you have multiple in one Maya scene.
 
-`attribute_count = cmds.getAttr(f'{node}.location{index}', size=True)
+```
+attribute_count = cmds.getAttr(f'{node}.location{index}', size=True)
 for attribute in range(attribute_count):
 	location = cmds.getAttr(f"{node}.location{index}{[attribute]}")
 	rotation = cmds.getAttr(f"{node}.rotation{index}{[attribute]}")
 	scale = cmds.getAttr(f"{node}.scale{index}{[attribute]}")
 	row = location+rotation+scale
-	writer.writerow(row)`
+	writer.writerow(row)
+```
 
 
 ### Bringing it into Unreal
