@@ -39,61 +39,65 @@ With the outputs setup and passed through, the node editor will then have all th
 
 Scripting the csv export is probably the most tedious part if you have multiple static meshes, like Kelp 1, 2 and 3.  This is only because Maya's naming will always be adding integers to the node name as a suffix when you create them.  The first node you add probably won't have an integer (like Location above), but the second one will add a '1', and then increment--so sometimes the 'index' below will just return: "".  The 'node' is also necessary for finding the specific Bifrost graph should you have multiple in one Maya scene.
 
-`attribute_count = cmds.getAttr(f'{node}.location{index}', size=True)`
-`for attribute in range(attribute_count):`
-	`location = cmds.getAttr(f"{node}.location{index}{[attribute]}")`
-	`rotation = cmds.getAttr(f"{node}.rotation{index}{[attribute]}")`
-	`scale = cmds.getAttr(f"{node}.scale{index}{[attribute]}")`
-	`row = location+rotation+scale`
-	`writer.writerow(row)`
+`attribute_count = cmds.getAttr(f'{node}.location{index}', size=True)
+for attribute in range(attribute_count):
+	location = cmds.getAttr(f"{node}.location{index}{[attribute]}")
+	rotation = cmds.getAttr(f"{node}.rotation{index}{[attribute]}")
+	scale = cmds.getAttr(f"{node}.scale{index}{[attribute]}")
+	row = location+rotation+scale
+	writer.writerow(row)`
 
 
 ### Bringing it into Unreal
 Either within a vanilla Blueprint struct, or in C++ you can then create a struct to read from the csv.  There's nothing special about it, just a way of reading each row as a instance:
 
-`USTRUCT(BlueprintType)`
-`struct FFoliageStruct : public FTableRowBase`
-`{`
-	`GENERATED_BODY()`
-	`UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Foliage")`
-	`FVector Location = {0.f, 0.f, 0.f};`
+`
+USTRUCT(BlueprintType)
+struct FFoliageStruct : public FTableRowBase
+{
+	GENERATED_BODY()
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Foliage")
+	FVector Location = {0.f, 0.f, 0.f};
 
-	`UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Sims Foliage")`
-	`FVector Rotation = { 0.f, 0.f, 0.f };`
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Sims Foliage")
+	FVector Rotation = { 0.f, 0.f, 0.f };
 
-	`UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Sims Foliage")`
-	`FVector Scale = { 1.f, 1.f, 1.f };`
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Sims Foliage")
+	FVector Scale = { 1.f, 1.f, 1.f };
 
-`};`
+};
+`
 
 
 The Foliage Actor class we add to the level is also super straightforward, just needs a HISM component we can add the rows to, and target a static mesh set:
-`ABifrostFoliage::ABifrostFoliage()
-`{`
-	`FoliageInstance = CreateDefaultSubobject<UHierarchicalInstancedStaticMeshComponent>(TEXT("FoliageInstance"));`
-	`RootComponent = FoliageInstance;`
-`}`
+`
+ABifrostFoliage::ABifrostFoliage()
+{
+	FoliageInstance = CreateDefaultSubobject<UHierarchicalInstancedStaticMeshComponent>(TEXT("FoliageInstance"));
+	RootComponent = FoliageInstance;
+}
+`
 
 The import can then be setup in python to grab the csv, read its locations, rotations and scales and pass them into the level's foliage instance.  It can take some fiddling to get the data types correct, but once you have one of the columns working the others are easy.  I made a simple function to read this data and return all 3 elements:
 
-`def read_from_csv(file_path):`  
-    `locations = []`  
-    `rotations = []`  
-    `scales = []`  
-    `with open(file_path, mode='r') as csvfile:`  
-        `reader = csv.DictReader(csvfile)`  
-        `for row in reader:`  
-            `locations.append(eval(row['location']))`  
-            `rotations.append(eval(row['rotation']))`  
-            `scales.append(eval(row['scale']))`  
-    `return locations, rotations, scales`
+`def read_from_csv(file_path):
+    locations = []
+    rotations = []
+    scales = []
+    with open(file_path, mode='r') as csvfile:  
+        reader = csv.DictReader(csvfile)  
+        for row in reader:
+            locations.append(eval(row['location']))  
+            rotations.append(eval(row['rotation']))  
+            scales.append(eval(row['scale']))  
+    return locations, rotations, scales`
 
 From there it's just a matter of finding the actor in the level, casting to it, converting the radians to degrees and then adding all the instances!  
 
-`locations, rotations, scales = read_from_csv(csv_path)`
-`instance_component = foliage_actor_ref.get_component_by_class(unreal.HierarchicalInstancedStaticMeshComponent)`  
-`instance = unreal.HierarchicalInstancedStaticMeshComponent.cast(instance_component)`
-`for x in range(len(locations)):`
-	`transform = unreal.Transform(locations[x], get_radian_in_degrees(rotations[x]), scales[x])`  
-	`instance.add_instance(transform)`  
-`unreal.EditorLevelLibrary.save_current_level()`
+`locations, rotations, scales = read_from_csv(csv_path)
+instance_component = foliage_actor_ref.get_component_by_class(unreal.HierarchicalInstancedStaticMeshComponent)  
+instance = unreal.HierarchicalInstancedStaticMeshComponent.cast(instance_component)
+for x in range(len(locations)):
+	transform = unreal.Transform(locations[x], get_radian_in_degrees(rotations[x]), scales[x])  
+	instance.add_instance(transform)  
+unreal.EditorLevelLibrary.save_current_level()`
