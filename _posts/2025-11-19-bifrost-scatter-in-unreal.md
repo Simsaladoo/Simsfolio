@@ -1,7 +1,7 @@
 ---
 title: Using Bifrost Scatters in Unreal
 layout: post
-post-image: https://david-miller.life/images/bifrost_scattering.jpg
+post-image: https://david-miller.life/images/bifrost_scattering.png
 description: Using Bifrost Scatters for foliage in Unreal
 tags:
   - sample
