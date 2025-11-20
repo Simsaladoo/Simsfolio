@@ -54,6 +54,11 @@ for attribute in range(attribute_count):
 Either within a vanilla Blueprint struct, or in C++ you can then create a struct to read from the csv.  There's nothing special about it, just a way of reading each row as a instance:
 
 ```
+USTRUCT(BlueprintType)
+struct FFoliageStruct : public FTableRowBase
+{
+    GENERATED_BODY()
+
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Foliage")
     FVector Location = {0.f, 0.f, 0.f};
     
@@ -62,6 +67,7 @@ Either within a vanilla Blueprint struct, or in C++ you can then create a struct
     
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Sims Foliage")
     FVector Scale = { 1.f, 1.f, 1.f };
+};
 ```
 
 
