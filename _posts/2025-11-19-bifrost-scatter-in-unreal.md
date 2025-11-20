@@ -23,6 +23,7 @@ So what I’ve been doing with Bifrost lately is making scattering compounds and
 [![graph](https://david-miller.life/images/Bifrost_graph.png)](https://david-miller.life/images/Bifrost_graph.png)
 
 The compound just needs to use the basic Bifrost Scatter node to generate the initial points.  Below I set the noise type to 'BlueNoise' and then set a base normal angle to mask out terrain features.  The points and positions can then be operated on to produce rotations and scale for when we import into Unreal.
+
 [![scattering](https://david-miller.life/images/bifrost_scattering.png)](https://david-miller.life/images/bifrost_scattering.png)
 
 ### Bifrost Compounds
