@@ -19,6 +19,7 @@ Now Unreal 5+ does have its own procedural content generation if you’re buildi
 
 ### Maya Bifrost Scattering
 So what I’ve been doing with Bifrost lately is making scattering compounds and then importing their results into Unreal Engine as hierarchical instanced static meshes (HISMs).  You can create these instances in Maya with either plain points or using referenced game assets to populate the scene as a full preview, but the basic goal is essentially just populating a transform array.  These get exported out to a csv that lists all the translations, rotation and scale for each type of asset, and can then be read from within Unreal just using some simple python scripting to populate the meshes in-editor.
+
 [![graph](https://david-miller.life/images/Bifrost_graph.png)](https://david-miller.life/images/Bifrost_graph.png)
 
 The compound just needs to use the basic Bifrost Scatter node to generate the initial points.  Below I set the noise type to 'BlueNoise' and then set a base normal angle to mask out terrain features.  The points and positions can then be operated on to produce rotations and scale for when we import into Unreal.
