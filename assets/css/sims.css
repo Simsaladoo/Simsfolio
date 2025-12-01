@@ -14,6 +14,14 @@
     background: rgba(35,35,35,35.0)!important;
 }
 
+
+.highlighter-rouge .highlight pre,
+.highlighter-rouge .highlight code {
+    white-space: pre-wrap;      /* allow wrapping */
+    word-wrap: break-word;      /* break long tokens */
+}
+
+
 .footer a img {
     width: 26px;
     height: 26px;
