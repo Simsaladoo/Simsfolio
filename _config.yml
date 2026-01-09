@@ -44,7 +44,7 @@ author-name: Simsaladoo
 # URL for the Image of the Author
 author-image: https://david-miller.life/images/suit.jpg
 # 60 Words About the Author
-author-about: I'm David, a Unreal Engine-focused technical artist with a background in pipeline tools and development. For the last 9 years I've worked on films, commercials, video game trailers, and VR games. Learning Sharepoint in C# was my gateway into programming during my early career years at NASA, and since then the diverse projects I've worked on have given me a wealth of experience and perspective.  Nearly a decade of experience using Blueprints, Python, C++, engine optimization with Insights and visual studio, learning pipeline APIs, as well as implementing shader tricks and master materials, post-processing, creating stage tools and look-dev.
+author-about: I'm David, a Unreal Engine developer with almost 10 years of experience as a technical artist with a background in pipeline tools. For the last 9 years I've worked on films, commercials, video game trailers, and VR games. Learning Sharepoint in C# was my gateway into programming during my early career years at NASA, and since then the diverse projects I've worked on have given me a wealth of experience and perspective.  I started with material shaders and environment art while learning Blueprinting, and gradually moved onto Python and C++.  I've done scene optimizations using Insights and game code debugging in visual studio.  More recently I've been learning pipeline APIs, and contributing to studio development as a whole by writing more code and tools wherever their need arises.
 # URL to the Author's Profile (i.e., Github, Twitter, Stackoverflow, etc)
 author-url: https://github.com/Simsaladoo
 
