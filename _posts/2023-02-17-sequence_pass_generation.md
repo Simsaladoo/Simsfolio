@@ -1,7 +1,7 @@
 ---
 title: Sequence Pass Generator
 layout: post
-post-image: "https://david-miller.life/images/datalayer_diagram.png"
+post-image: "https://david-miller.life/images/sequence_tool.gif"
 description: The paths on each shot-object in the UI also act as links to make finding the sequences more easily in the editor.
 tags:
 - sample
