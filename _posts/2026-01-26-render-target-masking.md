@@ -10,8 +10,6 @@ tags:
   - test
 ---
 
-### Render Target material masking  
-
 Render Targets (RTs) are a special use-case tech in Unreal for when you need a texture to be able to update at runtime, or even in editor.  They're used for minimaps, portals, live monitors, dynamic painting in VR, depth maps, snow and material edits and plenty of other custom solutions.  Typically you'd use a material "stamp" to paste draws onto the RT like a canvas--which is what the functions in Unreal are named that refer to the RT update process.
 
 More recently I had to use this on a Fortnite trailer to make grass trample down when a large force of combatants walked across a field.  (You can watch that trailer here https://www.youtube.com/watch?v=7ZIbokU9tRg but the scene was ultimately cut down in editorial).  The most common way of doing this is attaching locators to the feet of a character and then using those coordinates to apply the material stamp into a master Render Target.  However what if there are hundreds of these characters?  Without enough time to create a script to attach them all, I needed to be able to get this done *really* quickly, so here's the process I came up with.
