@@ -9,8 +9,6 @@ tags:
 - test
 ---
 
-### Perforce Stream View Mapping
-
 Earlier this year at Halon, we participated in a case study with Perforce to talk about how we manage our Unreal master material library and custom plugins.  The material library is a centrally-managed package of shaders that we previously had to manually migrate from project to project, and would sometimes get messed up from naming collisions or missing redirectors.  
 
 We found that by using view mappings and putting them into their own stream, we could then import them into the projects as part of our startup phase and have more concise control over the content.  The initial migration had some issues, but once we cleaned up existing assets it made the pipeline a lot more streamlined and LOT less error-prone.

@@ -9,9 +9,7 @@ tags:
 - test
 ---
 
-### Screenshot Tool
-
-As you select cameras from the list, the bottom of the Tool will display the preconstructed directory and name of each image to be exported. It will create this from the path beginning with the show:
+A editor widget serves as a selector of cameras that it searches and finds in the level.  As you select cameras from its list, the bottom of the Tool will display the preconstructed directory and name of each image to be exported. It will create this from the path beginning with the show:
 
     Show Name\artists\User Name\Screenshots\Level Name\Current Date\
 

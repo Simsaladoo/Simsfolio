@@ -9,7 +9,7 @@ tags:
 - test
 ---
 
-### Data Layering using Image to CSV Conversion
+This was my first testing method of writing game data like zone triggers, fauna spawn types, and random spawn generators into textures that I can edit back and forth from png to csv.
 
 [![MainImage](https://david-miller.life/images/datalayer_diagram.png)](https://david-miller.life/images/datalayer_diagram.png)
 

@@ -9,8 +9,6 @@ tags:
 - test
 ---
 
-### Foliage Converter
-
 The purpose of this tool is to provide a simple work around for being able to re-use instances of meshes by copying in-engine painted foliage into new actors that we can control as normal.
 
 Many Tools already exist for this on the marketplace, especially ones more powerful like the Instance Tool, which is used from time to time. This Foliage Copier tool however is not a plugin, and can be freely copied with its actor component across to any projects without needing to edit configs. It even works in UE5 projects since it is created in 4.27.2.

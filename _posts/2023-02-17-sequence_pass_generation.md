@@ -9,8 +9,6 @@ tags:
 - test
 ---
 
-### Sequence Pass Generator
-
 Sometimes in post-viz, its necessary to bake out other unreal passes so they could be used in editing for extra shadow, reflections and effects work.  This becomes a huge task when there are hundreds of cameras and episodes, so finding a means of automating the changing of level sequencer tracks, level streaming settings, and manicuring pass settings and rendering them is a massive time-saver.
 
 [![MainImage](https://david-miller.life/images/sequence_tool.gif)](https://david-miller.life/images/sequence_tool.gif)

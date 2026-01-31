@@ -9,8 +9,6 @@ tags:
 - test
 ---
 
-### CSV Importer & Asset Tagging
-
 Many times when dealing with converting data in-engine into lightweight gameplay assets or when having to do execute small tasks on many types of assets all at once, we utilize Python.  Depending on the project and requirement we may run this headlessly through the UE4Editor-Cmd.exe, or through an in-editor script--but it will generally use the same classes either way.
 
 To read/write a datable previously imported, we simply pass an in-engine asset's package path in through a load_object in order to cast to the datatable class, like you would for an import of the asset.  From here we can then play with parameters:

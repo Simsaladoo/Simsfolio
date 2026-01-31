@@ -9,7 +9,6 @@ tags:
   - test
 ---
 
-### Using Bifrost Scatters in Unreal
 Seasons' greetings!
 
 So I’ve been experimenting a lot with Bifrost in Maya lately and came up with some interesting things I’d like to share concerning scattering foliage.  Typically I think most game companies do this sort of thing in Houdini, but since that’s a separate package with extra licensing, etc and may/may not be within a budget there's another option.  Bifrost is a Maya plugin that comes free within the DCC that is a node-based effects creator.  It does Fluids and particles, as well as cloth and crowd stuff but what I’ve been experimenting with lately is using it for instanced foliage scattering.

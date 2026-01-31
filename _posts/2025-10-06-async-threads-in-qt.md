@@ -9,7 +9,6 @@ tags:
 - test
 ---
 
-### Async QThreads in PyQt
 
 While making Unreal UI tools with PySide, I sometimes come across a problem of needing to create long-running tasks that can operate in the background while I do other things.  Especially the case when I want to run Unreal headlessly to say loop over all assets and change properties, or load levels and create things, or even run renders.  
 
