@@ -22,6 +22,9 @@
     background: rgba(35,35,35,35.0)!important;
 }
 
+.subtitle .is-blog-header {
+    color: white !important;
+}
 
 .highlighter-rouge .highlight pre,
 .highlighter-rouge .highlight code {
