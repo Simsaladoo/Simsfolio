@@ -6,6 +6,14 @@
     box-sizing: content-box;
 }
 
+#blog {
+    background-color: dimgray;
+}
+
+#blog-card a {
+    background-color: white;
+}
+
 #hero {
     background: linear-gradient(0deg, #000 0%, rgba(0,0,0,0.0) 100%)!important;
 }
