@@ -23,8 +23,14 @@
 }
 
 .image.is-3by1 {
-    padding-top: 75.0%!important
+    padding-top: 75.0% !important
 }
+
+.column.is-one-fifth-fullhd {
+    width: 33%;
+    height: 100%;
+}
+
 
 .subtitle .is-blog-header {
     color: white !important;
