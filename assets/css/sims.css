@@ -15,11 +15,15 @@
 }
 
 #hero {
-    background: linear-gradient(0deg, #000 0%, rgba(0,0,0,0.0) 100%)!important;
+    background: linear-gradient(0deg, #000 0%, rgba(0,0,0,0.0) 100%) !important;
 }
 
 #videos {
-    background: rgba(35,35,35,35.0)!important;
+    background: rgba(35,35,35,35.0) !important;
+}
+
+.image.is-3by1 {
+    padding-top: 75.0%!important
 }
 
 .subtitle .is-blog-header {
