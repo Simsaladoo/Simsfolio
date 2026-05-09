@@ -19,7 +19,7 @@ jobs:
       - name: Fetch Steam Workshop Data
         env:
           STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
-          STEAM_USER_ID: "Simsaladoo"  # Replace with your IDs
+          STEAM_USER_ID: 76561197995368724  # Replace with your IDs
         run: |
           # Get all your published workshop items
           ITEMS=$(curl -s "https://api.steampowered.com/IPublishedFileService/GetUserFiles/v1/?key=${STEAM_API_KEY}&steamid=${STEAM_USER_ID}&appid=0&numperpage=50&return_details=true")
