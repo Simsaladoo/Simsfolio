@@ -1,0 +1,45 @@
+name: Update Steam Workshop Stats
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: main  # ← Explicitly checkout main
+
+      - name: Fetch Steam Workshop Data
+        env:
+          STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
+          WORKSHOP_IDS: "Simsaladoo"  # Replace with your IDs
+        run: |
+          IFS=',' read -ra IDS <<< "$WORKSHOP_IDS"
+          URL="https://api.steampowered.com/IPublishedFileService/GetDetails/v1/?key=${STEAM_API_KEY}"
+          
+          for i in "${!IDS[@]}"; do
+            URL="${URL}&publishedfileids[$i]=${IDS[$i]}"
+          done
+          
+          curl -s "$URL" \
+            | jq '.response.publishedfiledetails | map({
+                id: .publishedfileid,
+                title: .title,
+                views: .views,
+                subscriptions: .subscriptions,
+                favorited: .favorited,
+                lifetime_subscriptions: .lifetime_subscriptions,
+                lifetime_favorited: .lifetime_favorited
+              })' > _data/steam_workshop.json
+
+      - name: Commit and Push
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add _data/steam_workshop.json
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update Steam Workshop stats [skip ci]"
+          git push origin main
