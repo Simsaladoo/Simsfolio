@@ -19,24 +19,20 @@ jobs:
       - name: Fetch Steam Workshop Data
         env:
           STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
-          STEAM_USER_ID: 76561197995368724  # Replace with your IDs
         run: |
-          # Get all your published workshop items
-          ITEMS=$(curl -s "https://api.steampowered.com/IPublishedFileService/GetUserFiles/v1/?key=${STEAM_API_KEY}&steamid=${STEAM_USER_ID}&appid=0&numperpage=50&return_details=true")
+          # Force Steam ID as string with quotes
+          STEAM_ID="${{ secrets.STEAM_USER_ID }}"
           
-          # Extract the IDs and fetch detailed stats
-          echo "$ITEMS" | jq -r '.response.publishedfiledetails[] | .publishedfileid' | while read -r ID; do
-            DETAILS=$(curl -s "https://api.steampowered.com/IPublishedFileService/GetDetails/v1/?key=${STEAM_API_KEY}&publishedfileids[0]=${ID}")
-            echo "$DETAILS"
-          done | jq -s '[.[].response.publishedfiledetails[0] | {
-            id: .publishedfileid,
-            title: .title,
-            views: .views,
-            subscriptions: .subscriptions,
-            favorited: .favorited,
-            lifetime_subscriptions: .lifetime_subscriptions,
-            lifetime_favorited: .lifetime_favorited
-          }]' > _data/steam_workshop.json
+          curl -s "https://api.steampowered.com/IPublishedFileService/GetUserFiles/v1/?key=${STEAM_API_KEY}&steamid=${STEAM_ID}&appid=0&numperpage=100&return_details=true" \
+            | jq '.response.publishedfiledetails | map({
+                id: .publishedfileid,
+                title: .title,
+                views: .views,
+                subscriptions: .subscriptions,
+                favorited: .favorited,
+                lifetime_subscriptions: .lifetime_subscriptions,
+                lifetime_favorited: .lifetime_favorited
+              })' > _data/steam_workshop.json
 
       - name: Commit and Push
         run: |
