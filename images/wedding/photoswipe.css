@@ -465,3 +465,36 @@ Video style
     height:100%;
 
 }
+
+
+/*
+Photo stuff styling
+*/
+
+.gallery-controls {
+
+    text-align:center;
+    margin:50px auto 20px;
+    padding:0 20px;
+
+}
+
+
+.gallery-controls h2 {
+
+    font-size:30px;
+    font-weight:400;
+    margin-bottom:20px;
+
+}
+
+
+.gallery-controls select {
+
+    font-size:18px;
+    padding:12px 20px;
+    border-radius:10px;
+    border:1px solid #ccc;
+    background:white;
+
+}
