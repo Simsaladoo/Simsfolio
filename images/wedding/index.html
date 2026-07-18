@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Wedding Photos</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe.css">
+
+<style>
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #fafafa;
+    color: #333;
+}
+
+
+header {
+    text-align: center;
+    padding: 50px 20px 20px;
+}
+
+
+h1 {
+    font-size: 42px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+
+select {
+    font-size: 18px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background: white;
+    min-width: 250px;
+}
+
+
+.gallery-section {
+
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 20px;
+
+}
+
+
+.gallery-title {
+
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 25px;
+
+}
+
+
+.gallery {
+
+    columns: 4;
+    column-gap: 18px;
+
+}
+
+
+.gallery a {
+
+    display: block;
+    margin-bottom: 18px;
+    break-inside: avoid;
+
+}
+
+
+.gallery img {
+
+    width:100%;
+    display:block;
+    border-radius:12px;
+    cursor:zoom-in;
+    transition:.25s ease;
+
+}
+
+
+.gallery img:hover {
+
+    transform:scale(1.02);
+
+}
+
+
+@media(max-width:1000px){
+
+    .gallery {
+        columns:3;
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    .gallery {
+        columns:2;
+    }
+
+    h1 {
+        font-size:32px;
+    }
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<h1>
+Wedding Photos
+</h1>
+
+
+<select id="gallery-select">
+
+<option>
+Loading...
+</option>
+
+</select>
+
+
+</header>
+
+
+
+<section class="gallery-section">
+
+<h2 class="gallery-title" id="gallery-title"></h2>
+
+<div class="gallery" id="gallery"></div>
+
+</section>
+
+
+
+<script type="module">
+
+
+import PhotoSwipeLightbox from
+'https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe-lightbox.esm.min.js';
+
+
+
+const IMAGE_ROOT = "/images/wedding/";
+
+let galleries = {};
+
+let lightbox;
+
+
+
+async function loadGalleryData(){
+
+
+    const response = await fetch(
+        IMAGE_ROOT + "gallery.json"
+    );
+
+
+    galleries = await response.json();
+
+
+    populateDropdown();
+
+
+}
+
+
+
+function populateDropdown(){
+
+
+    const select =
+        document.getElementById(
+            "gallery-select"
+        );
+
+
+    select.innerHTML = "";
+
+
+    Object.keys(galleries).forEach(
+        category => {
+
+
+        const option =
+            document.createElement("option");
+
+
+        option.value = category;
+
+        option.textContent =
+            formatTitle(category);
+
+
+        select.appendChild(option);
+
+
+    });
+
+
+
+    select.addEventListener(
+        "change",
+        () => {
+            displayGallery(select.value);
+        }
+    );
+
+
+    // Load first gallery automatically
+
+    displayGallery(
+        select.value
+    );
+
+}
+
+
+
+
+function displayGallery(category){
+
+
+    const gallery =
+        document.getElementById(
+            "gallery"
+        );
+
+
+    const title =
+        document.getElementById(
+            "gallery-title"
+        );
+
+
+    gallery.innerHTML = "";
+
+
+    title.textContent =
+        formatTitle(category);
+
+
+
+    galleries[category].forEach(
+        image => {
+
+
+        const url =
+            IMAGE_ROOT +
+            category +
+            "/" +
+            image;
+
+
+
+        const link =
+            document.createElement("a");
+
+
+        link.href = url;
+
+
+        const img = new Image();
+
+        img.src = url;
+
+        img.onload = () => {
+            link.dataset.pswpWidth = img.naturalWidth;
+            link.dataset.pswpHeight = img.naturalHeight;
+        };
+
+
+        link.innerHTML = `
+
+            <img
+                src="${url}"
+                loading="lazy"
+                alt="Wedding photo"
+            >
+
+        `;
+
+
+        gallery.appendChild(link);
+
+
+    });
+
+
+
+    setupLightbox();
+
+}
+
+
+
+
+function setupLightbox(){
+
+
+    if(lightbox){
+        lightbox.destroy();
+    }
+
+
+    lightbox =
+        new PhotoSwipeLightbox({
+
+        gallery:"#gallery",
+
+        children:"a",
+
+        pswpModule: () =>
+            import(
+            'https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe.esm.min.js'
+            )
+
+    });
+
+
+    lightbox.init();
+
+}
+
+
+
+
+function formatTitle(text){
+
+    return text
+        .replaceAll("-", " ")
+        .replace(/\b\w/g,
+            c => c.toUpperCase()
+        );
+
+}
+
+
+
+loadGalleryData();
+
+
+</script>
+
+
+</body>
+</html>
