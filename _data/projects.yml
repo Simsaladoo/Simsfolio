@@ -1,20 +1,25 @@
 - name: Winds of Almerra - PC RPG
+  steam_game: almerra
   image: https://david-miller.life/images/woa.jpg
   link: https://almerra.com
   description: Command the siege or join the shield wall.  Conquer the seas and wilds as you write the history of nations in conflict.
 - name: Wonders of the World - GearVR
+  steam_game: unreal
   link: https://www.meta.com/experiences/wonders-of-the-world/1251787591581936/
   image: https://david-miller.life/images/wonders.jpg
   description: In Wonders of the world you will visit the Colossus of Rhodes, Taj Mahal and Machu Picchu.  Travel to the island of Rhodes in the year 251 BCE, famous for the 108 foot statue of the Greek god Helios, known today as the Colossus of Rhodes! When you arrive you will assume the character Melissa of Delos, a priestess in the temple of Aphrodite.
 - name: Elder Scrolls V Skyrim - Borcha's Hunting Quests
+  steam_game: skyrim
   link: https://steamcommunity.com/sharedfiles/filedetails/?id=348202136&searchtext=quest
   image: https://david-miller.life/images/skyrim.jpg
   description: Borcha the Enchanting Trainer's hunting quests (now fully voiced).  Borcha resides at the New Gnisis Cornerclub in Windhelm, selling high quality enchanted gear and training. He is voiced, and starts a quest line of rare epic boss hunts around Tamriel. The quest is just half finished, meaning there are just 4 epic boss hunts in-game. The rest will be added in another update later on once they're properly finished
 - name: Arma III Multiplayer Campaign
+  steam_game: arma
   link: https://steamcommunity.com/sharedfiles/filedetails/?id=264779809
   image: https://david-miller.life/images/arma.jpg
   description: While the war between NATO and Opfor are in a standstill on Altis, insurgent forces wreak havoc across local sites. In the front lines against these rebels is a counter-terrorism task force, codenamed "Blue Spear."
 - name: Mount & Blade Multiplayer Maps
+  steam_game: warband
   link: https://www.youtube.com/watch?v=lVD4xHvw8l0&list=PLLcxd4soKLM4e8CncVTpEXcbgPh8Cy9rZ
   image: https://david-miller.life/images/warband.png
   description: Mount & Blade - Warband siege & team deathmatch maps created for Golden Kingdom servers.

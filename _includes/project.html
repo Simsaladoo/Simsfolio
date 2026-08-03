@@ -18,6 +18,55 @@
                       <h1 class="title has-text-white is-size-4">{{ project.name }}</h1>
                       <p class="has-text-white has-text-weight-light content">{{ project.description | truncate: 80}}</p>
                     </div>
+
+                    {% assign lifetime_subscriptions = 0 %}
+                    {% assign subscriptions = 0 %}
+                    {% assign views = 0 %}
+                    {% assign favorites = 0 %}
+                    {% assign lifetime_favorites = 0 %}
+                    {% assign workshop_items = 0 %}
+
+                    {% for item in site.data.steam_workshop %}
+                      {% if item.game == project.steam_game %}
+                        {% assign workshop_items = workshop_items | plus: 1 %}
+                        {% assign lifetime_subscriptions = lifetime_subscriptions | plus: item.lifetime_subscriptions %}
+                        {% assign subscriptions = subscriptions | plus: item.subscriptions %}
+                        {% assign views = views | plus: item.views %}
+                        {% assign favorites = favorites | plus: item.favorited %}
+                        {% assign lifetime_favorites = lifetime_favorites | plus: item.lifetime_favorited %}
+                      {% endif %}
+                    {% endfor %}
+                    <!--
+
+                    <div class="project-stats">
+                        <div class="stat">
+                            <span class="value">{{ workshop_items }}</span>
+                            <span class="label">Workshop Items</span>
+                        </div>
+
+                        <div class="stat">
+                            <span class="value">{{ lifetime_subscriptions }}</span>
+                            <span class="label">Lifetime Subscriptions</span>
+                        </div>
+
+                        <div class="stat">
+                            <span class="value">{{ subscriptions }}</span>
+                            <span class="label">Current Subscribers</span>
+                        </div>
+
+                        <div class="stat">
+                            <span class="value">{{ views }}</span>
+                            <span class="label">Views</span>
+                        </div>
+
+                        <div class="stat">
+                            <span class="value">{{ lifetime_favorites }}</span>
+                            <span class="label">Lifetime Favorites</span>
+                        </div>
+                    </div>
+
+                    -->
+
                   </div>
                   </a>
                 </div>
